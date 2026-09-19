@@ -1,0 +1,62 @@
+TECH STACK CHỐT
+Ngôn ngữ: Kotlin
+Nền tảng: Android native
+UI: Jetpack Compose
+Database: Room
+State: ViewModel + StateFlow
+Navigation: Navigation Compose
+DI: Hilt
+Async: Coroutines + Flow
+Test: Không
+IDE: Android Studio
+Build: Gradle Kotlin DSL
+
+DANH SÁCH FEATURE ĐẦY ĐỦ
+
+📌 NHÓM 1 — Quản lý Shop
+#	Feature	Mô tả
+1.1	Tạo shop	Nhập tên shop, ghi chú (link, SĐT…), không bắt buộc
+1.2	Sửa / Xóa shop	Xóa shop → xóa luôn sản phẩm bên trong
+1.3	Gán tag cho shop	VD: ưu tiên, uy tín, hay giao thiếu
+1.4	Sắp xếp shop	Theo tên / theo số SP rẻ nhất / theo tag
+1.5	Ẩn shop	Không xóa, chỉ ẩn khỏi danh sách chính
+1.6	Thống kê shop	Hiển thị ngay trên tiêu đề: 🏆 rẻ nhất X sản phẩm
+📌 NHÓM 2 — Quản lý Sản phẩm trong Shop
+#	Feature	Mô tả
+2.1	Thêm sản phẩm vào shop	Nhập tên SP + giá (+ ghi chú, đơn vị)
+2.2	Sửa / Xóa sản phẩm	Chỉnh giá, tên, xóa khỏi shop
+2.3	Gán tag cho sản phẩm	VD: bán chạy, cần mua gấp, hàng order
+2.4	Sản phẩm trùng tên tự nhóm	"Áo thun M" ở Shop A và Shop B → app tự hiểu là cùng 1 SP để so giá
+2.5	Ghi chú sản phẩm	"size M còn 3 cái", "mua 10 giảm 5%"…
+2.6	Đơn vị / quy cách	cái, kg, thùng… để so giá công bằng
+📌 NHÓM 3 — Hiển thị & So sánh (TRÁI TIM APP)
+#	Feature	Mô tả
+3.1	Hiển thị theo Shop	Tiêu đề = Shop, bên dưới = danh sách sản phẩm
+3.2	Highlight 🟢 rẻ nhất	Tự động so giữa các shop, tô xanh SP rẻ nhất
+3.3	Highlight 🔴 đắt nhất	Tô đỏ SP không rẻ nhất (tùy chọn bật/tắt)
+3.4	Highlight 🟡 theo tag	SP/shop có tag → viền vàng, dễ nhận ra
+3.5	Hiển thị 🏆 trên tiêu đề shop	"Shop A — rẻ nhất 5 SP"
+3.6	Hiển thị ⚠️ shop vô dụng	Shop rẻ nhất 0 SP → cảnh báo
+3.7	Tìm kiếm sản phẩm	Gõ tên → chỉ hiện SP đó ở tất cả shop
+3.8	Sắp xếp trong shop	Theo giá / theo tên / theo tag
+3.9	Thu gọn / mở rộng shop	Bấm vào tiêu đề shop → ẩn/hiện danh sách SP
+📌 NHÓM 4 — Lọc & Loại bỏ
+#	Feature	Mô tả
+4.1	Lọc shop rẻ nhất 0 SP	1 nút → hiện danh sách shop vô dụng
+4.2	Lọc theo tag	Chỉ hiện shop/SP có tag ưu tiên
+4.3	Lọc theo khoảng giá	VD: chỉ hiện SP dưới 100k
+4.4	Xóa hàng loạt	Chọn nhiều shop → xóa 1 lần
+📌 NHÓM 5 — Nhập liệu nhanh
+#	Feature	Mô tả
+5.1	Nhập theo Shop	Vào shop → thêm lần lượt SP
+5.2	Nhập theo Sản phẩm	Vào SP → thêm giá ở nhiều shop 1 lúc
+5.3	Dán từ Excel/CSV	Copy 3 cột Shop – SP – Giá → dán vào là xong
+5.4	Nhân bản sản phẩm	Tạo SP giống SP cũ, chỉ sửa giá
+
+🎯 ĐIỂM CỐT LÕI — Khi mở app lên là thấy ngay
+Danh sách shop xếp dọc, mỗi shop là 1 khối.
+Trong mỗi shop là danh sách SP + giá.
+Màu sắc cho biết ngay: rẻ nhất / đắt / có tag.
+Tiêu đề shop cho biết shop đó "xịn" hay "vô dụng" (🏆 hay ⚠️).
+Không cần bấm gì thêm — mở app là thấy hết.
+
